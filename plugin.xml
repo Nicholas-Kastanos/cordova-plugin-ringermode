@@ -5,8 +5,8 @@
     <license>MIT</license>
     <keywords>cordova,plugins,ringermode, ringer, mode, silent, mode, silentmode</keywords>
 
-    <js-module name="ringermode" src="www/ringerMode.js">
-        <clobbers target="window.ringerMode" />
+    <js-module name="RingerMode" src="www/ringerMode.js">
+        <clobbers target="window.RingerMode" />
     </js-module>
 
     <platform name="android">
