@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import org.apache.commons.lang.ArrayUtils;
+// import org.apache.commons.lang.ArrayUtils;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -80,6 +80,14 @@ public class ringerMode extends CordovaPlugin {
     }
 
     private boolean isValidMode(final int mode) {     
-        return ArrayUtils.contains(this.validModes, mode);
+        boolean valid = false;
+        for(int i = 0; i < this.validModes.length; i++){
+            if(this.validModes[i] == mode){
+                valid = true;
+                break;
+            }
+        }
+        return valid;
+        // return ArrayUtils.contains(this.validModes, mode);
     }
 }
